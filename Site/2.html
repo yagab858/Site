@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>International Women's Day</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url('background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: fadeIn 2s;
+    }
+    h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 36px;
+        padding: 20px 0;
+        background-color: rgba(0,0,0,0.5);
+        margin: 0;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.8);
+        animation: slideIn 0.5s;
+    }
+    .modal-content {
+        margin: 5% auto;
+        width: 80%;
+        max-width: 600px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .close {
+        color: #888;
+        float: right;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .close:hover {
+        color: #333;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes slideIn {
+        from { top: -100%; }
+        to { top: 0; }
+    }
+</style>
+</head>
+<body>
+<h1>8th of March</h1>
+<div class="gallery">
+    <img src="image1.jpg" onclick="openModal('Happy International Women\'s Day! First message')">
+    <img src="image2.jpg" onclick="openModal('Celebrate the achievements of women around the world! Second message')">
+    <img src="image3.jpg" onclick="openModal('Empower women, empower humanity! Third message')">
+    <!-- Add more images here -->
+</div>
+
+<div id="modal1" class="modal" onclick="closeModal()">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-text"></p>
+    </div>
+</div>
+
+<script>
+    let modal = document.getElementById('modal1');
+    let modalText = document.getElementById('modal-text');
+
+    function openModal(text) {
+        if (modal.style.display === 'none') {
+            modalText.textContent = text;
+            modal.style.display = 'block';
+            body.style.overflow = 'hidden';
+        } else {
+            alert("Please close the first modal window before proceeding.");
+        }
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        body.style.overflow = 'auto';
+    }
+
+    window.onclick = function(event) {       
+        if (event.target == modal) {
+            modal.style.display = 'none';
+            body.style.overflow = 'auto';
+        }
+    }
+</script>
+</body>
+</html>

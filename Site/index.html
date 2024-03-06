@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Tiles</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+  <h1 class="header-text">С 8 Марта!</h1>
+</div>
+<div id="first-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Добро пожаловать! На этом сайте вы можете исследовать увлекательный мир изображений. Просто кликните по любой картинке, чтобы увидеть ее в увеличенном виде.</p>
+  </div>
+</div>
+<div id="second-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p class="message"></p>
+  </div>
+</div>
+<div class="gallery">
+  <div class="row">
+    <div class="image" data-message="Happy"> <img src="01web.jpg" alt="Image1"></div>
+    <div class="image" data-message="Happy"> <img src="02web.jpg" alt="Image1"></div>
+    <div class="image" data-message="Happy"> <img src="03web.jpg" alt="Image1"></div>
+    <div class="image" data-message="Happy"> <img src="04web.jpg" alt="Image1"></div>
+    <div class="image" data-message="Happy"> <img src="05web.jpg" alt="Image1"></div>
+  </div>
+  <div class="row">
+    <div class="image" data-message="Happy"> <img src="06web.jpg" alt="Image1"></div>
+    <div class="image" data-message="Happy"> <img src="07web.jpg" alt="Image1"></div>
+    <div class="image" data-message="Happy"> <img src="08web.jpg" alt="Image1"></div>
+    <div class="image" data-message="Happy"> <img src="09web.jpg" alt="Image1"></div>
+    <div class="image" data-message="Happy"> <img src="10web.jpg" alt="Image1"></div>
+  </div>
+  <div class="row">
+    <div class="image" data-message="Happy"> <img src="11web.jpg" alt="Image1"></div>
+    <div class="image" data-message="Happy"> <img src="12web.jpg" alt="Image1"></div>
+    <div class="image" data-message="Happy"> <img src="13web.jpg" alt="Image1"></div>
+    <div class="image" data-message="Happy"> <img src="14web.jpg" alt="Image1"></div>
+    <div class="image" data-message="Happy"> <img src="15web.jpg" alt="Image1"></div>
+  </div>
+</div>
+<div id="modal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p id="modal-message"></p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
